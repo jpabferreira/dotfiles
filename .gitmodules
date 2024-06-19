@@ -13,3 +13,6 @@
 [submodule ".config/powerlevel10k"]
 	path = .config/powerlevel10k
 	url = git@github.com:romkatv/powerlevel10k.git
+[submodule ".config/ranger/plugins/ranger_devicons"]
+	path = .config/ranger/plugins/ranger_devicons
+	url = git@github.com:alexanderjeurissen/ranger_devicons.git
