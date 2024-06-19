@@ -1,0 +1,194 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+    "clock",
+    "hyprland/workspaces",
+    "cpu",
+    "memory",
+    "disk",
+    "mpd",
+    "cava"
+  ],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "custom/updates",
+    "network",
+    "pulseaudio",
+    "custom/equalizer",
+    "tray"
+  ],
+  "cava": {
+    "framerate": 30,
+    "autosens": 1,
+    "sensitivity": 1,
+    "bars": 10,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": true,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "waves": true,
+    "input_delay": 0,
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "actions": {
+      "on-click-right": "mode"
+    }
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 0
+  },
+  "hyprland/window": {
+    "format": " {}",
+    "rewrite": {
+      "(\\d\\. )?(.*) - Chrome": "<span color=\"#4285F4\"></span>  $2 ",
+      "nvim (.*)": "<span color=\"#57A143\"></span>  $1",
+      "nvim": "<span color=\"#57A143\">  Neovim</span> ",
+      "ranger(.*)": "<span color=\"#ffffff\"></span>  $1",
+      "kitty (.*)": "<span color=\"#ffffff\"></span>  $1",
+      "Search(.*)": "<span color=\"#a855f7\"></span>  Search$1"
+    },
+    "separate-outputs": false
+  },
+  "hyprland/submap": {
+    "format": "✌️ {}",
+    "max-length": 8,
+    "tooltip": true
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "󰎤",
+      "2": "󰎧",
+      "3": "󰎪",
+      "4": "󰎭",
+      "5": "󰎱",
+      "6": "󰎳",
+      "7": "󰎶",
+      "8": "󰎹",
+      "9": "󰎼",
+      "10": "󰽽",
+      "-99": "",
+      "active": "󱗜",
+      "default": "󱗝"
+    }
+  },
+  "network": {
+    "interface": "wlan0",
+    "format": "  {ifname}",
+    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": " ",
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "  {ifname}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "memory": {
+    "format": "󰍛 {}%",
+    "min-length": 5,
+    "align": 0,
+    "tooltip": "true"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "min-length": 5,
+    "align": 0,
+    "tooltip": "true"
+  },
+  "disk": {
+    "interval": 30,
+    "format": "  {percentage_used}%",
+    "tooltip-format": "Mountpoint '/': {specific_used:0.2f} GB used / {specific_total:0.2f} GB total ({specific_free:0.2f} GB free)",
+    "unit": "GB",
+    "path": "/",
+    "min-length": 5,
+    "align": 0
+  },
+  "mpd": {
+    "format": "{stateIcon}  <sup></sup> {title}",
+    "format-disconnected": "<span color=\"#AAAAAA\">󰝛  MPD Disconnected</span>",
+    "format-stopped": "<span color=\"#da4939\"> </span> MPD Stopped",
+    "interval": 2,
+    "state-icons": {
+      "paused": "<span color=\"#ffc66d\"></span>",
+      "playing": "<span color=\"#a5c261\"></span>"
+    },
+    "artist-len": 20,
+    "album-len": 40,
+    "title-len": 250,
+    "tooltip-format": "[ {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} ]  {artist} 󰇙 {album} 󰇙 ({songPosition}) {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+    "random-icons": {
+      "off": " ",
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": " 1"
+    },
+    "on-click": "mpc toggle"
+  },
+  "custom/equalizer": {
+    "format": "󰺢",
+    "tooltip-format": "Launch Pulseaudio equalizer",
+    "on-click": "exec /usr/bin/pulseaudio-equalizer-gtk"
+  },
+  "custom/updates": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": "once",
+    "return-type": "json",
+    "exec": "$HOME/.config/waybar/checkupdate.sh"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": ["", "", ""],
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "myxer"
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "interval": 60,
+    "tooltip": true,
+    "tooltip-format": "{calendar}",
+    "timezone": "Europe/London",
+    "locale": "en_GB.UTF-8",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  }
+}

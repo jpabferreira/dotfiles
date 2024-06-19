@@ -1,0 +1,61 @@
+/* window */
+/*   outer-box */
+/*     input */
+/*     scroll */
+/*       inner-box */
+/*         entry */
+/*           text */
+
+* {
+  font-family: "Hack Nerd Font", "Font Awesome 5 Free";
+}
+
+window {
+  background-color: rgba(43, 43, 43, 0.97);
+  /* Use compositor radius and border if running in a normal window (-n) */
+  /* border-radius: 20px; */
+  /* border: 2px solid rgba(0, 0, 0, 0.8); */
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+#input {
+  margin: 5px;
+  border: none;
+  color: #f8f8f2;
+  background-color: rgba(55, 59, 65, 0.95);
+}
+
+#scroll {
+  margin: 5px;
+  border: none;
+  background-color: rgba(55, 59, 65, 0.95);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#inner-box {
+  border: none;
+}
+
+#entry:focus {
+  border: none;
+}
+
+#entry:selected {
+  background-color: #a5c261; 
+}
+
+#text {
+  margin-left: 10px;
+  color: #c5c8c6;
+}
+
+#text:selected {
+  color: rgba(43, 43, 43, 0.97);
+}
+
