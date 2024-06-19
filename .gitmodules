@@ -10,3 +10,6 @@
 [submodule ".config/zsh/plugins/fzf-tab"]
 	path = .config/zsh/plugins/fzf-tab
 	url = git@github.com:Aloxaf/fzf-tab.git
+[submodule ".config/powerlevel10k"]
+	path = .config/powerlevel10k
+	url = git@github.com:romkatv/powerlevel10k.git
