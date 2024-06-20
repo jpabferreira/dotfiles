@@ -26,22 +26,22 @@
 [[ -s ~/.local/share/lscolors.sh ]] && source ~/.local/share/lscolors.sh
 
 # Plugins #
-source /home/joao/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh  # Zsh Autosuggestions
+source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh  # Zsh Autosuggestions
 
-fpath=(/home/joao/.config/zsh/plugins/zsh-completions/src $fpath)
+fpath=($HOME/.config/zsh/plugins/zsh-completions/src $fpath)
 # Completion settings
 zstyle ':completion:*' menu yes select
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-source /home/joao/.config/zsh/plugins/zsh-completions/completion-options.zsh
+source $HOME/.config/zsh/plugins/zsh-completions/completion-options.zsh
 autoload -Uz compinit
 compinit
 
 # Zsh-syntax-highlightling
-source /home/joao/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Zsh-FZF
-source /home/joao/.config/zsh/plugins/zsh-fzf/key-bindings.zsh
+source $HOME/.config/zsh/plugins/zsh-fzf/key-bindings.zsh
 
 # Fzf-tab: Make fzf the deafault Zsh completion engine
-source /home/joao/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+source $HOME/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 zstyle ':fzf-tab:*' fzf-min-height '15' # Increase min size

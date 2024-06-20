@@ -145,7 +145,7 @@ note() {
   local msg="$@"
   if (( $# >= 1 ))
   then
-    printf "%s\n-------------------\n%s\n\n" $(date "+%d/%m/%Y|%T") "$msg" >> /home/joao/Documents/Notes/Notes.txt
+    printf "%s\n-------------------\n%s\n\n" $(date "+%d/%m/%Y|%T") "$msg" >> $HOME/Documents/Notes/Notes.txt
   fi
 }
 

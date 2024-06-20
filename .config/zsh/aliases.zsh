@@ -63,10 +63,10 @@ alias pskill='ps -au joao | awk "{printf \"%7.7s   %-15s \n\" , \$1, \$4}" | fzf
 alias psearch='ps -au joao | awk "{printf \"%7.7s   %-15s \n\" , \$1, \$4}" | grep -i '
 #
 # Python & Pip
-# alias python='~/.venv/bin/python'
-# alias python3='~/.venv/bin/python3'
-# alias pip='~/.venv/bin/pip'
-# alias pip3='~/.venv/bin/pip3'
+# alias python='$HOME/.venv/bin/python'
+# alias python3='$HOME/.venv/bin/python3'
+# alias pip='$HOME/.venv/bin/pip'
+# alias pip3='$HOME/.venv/bin/pip3'
 #
 # Largest directories in any path (TODO: substitute * for desired path)
 alias big='du -ah * | sort -rh | head -20'
@@ -78,8 +78,8 @@ alias to-en='trans :en'
 alias speak='trans -sp'
 #
 # Football schedule
-alias foot='python ~/Scripts/football.py  -d5 -e 15 -t'
-alias bola='python ~/Scripts/football.py  -d5 -e 15 -t'
+alias foot='python $HOME/Scripts/football.py  -d5 -e 15 -t'
+alias bola='python $HOME/Scripts/football.py  -d5 -e 15 -t'
 #
 # Clipboard
 alias clip="xclip -selection c"
@@ -120,23 +120,12 @@ alias eulayout='setxkbmap eu'
 ###########################
 #
 ## Personal ##
-   down='/home/joao/Downloads'
-   docs='/home/joao/Documents'
-  music='/home/joao/Music'
-   pics='/home/joao/Pictures'
-  repos='/home/joao/Repos'
-scripts='/home/joao/Scripts'
-alias    down='cd $down'
-alias    docs='cd $docs'
-alias   music='cd $music'
-alias    pics='cd $pics'
-alias   repos='cd $repos'
-alias scripts='cd $scripts'
-#
-## Resources ##
-alias  fonts='/usr/share/fonts'
-alias  walls='/usr/share/backgrounds'
-alias		apps='/usr/share/applications'
+alias    down="cd $HOME/Downloads"
+alias    docs="cd $HOME/Documents"
+alias   music="cd $HOME/Music"    
+alias    pics="cd $HOME/Pictures" 
+alias   repos="cd $HOME/Repos"    
+alias scripts="cd $HOME/Scripts"  
 #
 ################################
 #  __                          #  
@@ -146,15 +135,15 @@ alias		apps='/usr/share/applications'
 ################################
 #
 ## QUICK ACCESS ##
-alias notes='nvim ~/Documents/PersonalNotes/TmpNotes'
-alias setup='nvim ~/Documents/PersonalNotes/setup-base-system'
-alias zalias='nvim ~/.config/zsh/aliases.zsh'
-alias zfun='nvim ~/.config/zsh/functions.zsh'
-alias zexp='nvim ~/.config/zsh/exports.zsh'
-alias zopt='nvim ~/.config/zsh/options.zsh'
-alias zplug='nvim ~/.config/zsh/plugins.zsh'
-alias zbind='nvim ~/.config/zsh/bindings.zsh'
-alias zfix='nvim ~/.config/zsh/fixes.zsh'
+alias  notes="nvim $HOME/Documents/Notes/TmpNotes"
+alias  setup="nvim $HOME/Documents/PersonalNotes/setup-base-system"
+alias zalias="nvim $HOME/.config/zsh/aliases.zsh"
+alias   zfun="nvim $HOME/.config/zsh/functions.zsh"
+alias   zexp="nvim $HOME/.config/zsh/exports.zsh"
+alias   zopt="nvim $HOME/.config/zsh/options.zsh"
+alias  zplug="nvim $HOME/.config/zsh/plugins.zsh"
+alias  zbind="nvim $HOME/.config/zsh/bindings.zsh"
+alias   zfix="nvim $HOME/.config/zsh/fixes.zsh"
 #
 ##############
 # |_/.|_|_   # 
@@ -183,7 +172,7 @@ alias wp='feh --bg-scale'
 alias path='echo $PATH | tr -s ":" "\n"'
 #
 # Cheat sheets:
-alias cheat-zle="bat ~/Documents/ZLE/zsh_bindings"
+alias cheat-zle="bat $HOME/Documents/ZLE/zsh_bindings"
 
 ## Dotfiles management
 alias dot="/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME"

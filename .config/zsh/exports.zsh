@@ -7,6 +7,8 @@
 # NOTE: Consider setting environment variables in ~/.config/pam_env.conf to
 # make use of the PAM infrastructure.
 
+export PATH="${PATH}:$HOME/.local/bin"
+
 ################################
 #  /\  _  _ |. _ _ |_. _  _  _ #
 # /--\|_)|_)||(_(_||_|(_)| )_) #
@@ -28,11 +30,11 @@ export RANGER_LOAD_DEFAULT_RC="FALSE"
 
 ## Ripgrep ##
 # Set ripgrep config path
-export RIPGREP_CONFIG_PATH=/home/joao/.config/ripgrep/rg.conf
+export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/rg.conf
 
 ## Other ##
 # Disable wrapping filenames containing spaces with quotes
 export QUOTING_STYLE=literal
 
 # Hyprshot save directory
-export HYPRSHOT_DIR=/home/joao/Pictures/Screenshots
+export HYPRSHOT_DIR=$HOME/Pictures/Screenshots
