@@ -21,6 +21,7 @@ fi
 # User-specific config
 source $HOME/.config/zsh/options.zsh
 source $HOME/.config/zsh/aliases.zsh
+source $HOME/.config/zsh/completion.zsh
 source $HOME/.config/zsh/exports.zsh
 source $HOME/.config/zsh/functions.zsh
 source $HOME/.config/zsh/plugins.zsh
