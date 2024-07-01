@@ -1,41 +1,24 @@
-#  _____  _____ __  __   ____  __            _           
-# /__  / / ___// / / /  / __ \/ /_  ______ _(_)___  _____
-#   / /  \__ \/ /_/ /  / /_/ / / / / / __ `/ / __ \/ ___/
-#  / /_____/ / __  /  / ____/ / /_/ / /_/ / / / / (__  ) 
-# /____/____/_/ /_/  /_/   /_/\__,_/\__, /_/_/ /_/____/  
-#                                  /____/                
-#
-
-## grc - Colorize a shitload of output ##
-# Requires grc (https://github.com/garabik/grc)
+###############################################################################
+#                                 ZSH OPTIONS                                 #
+###############################################################################
+# grc - Colorize a shitload of output (requires grc: https://github.com/garabik/grc)
 [[ -s /etc/grc.zsh ]] && source /etc/grc.zsh <$TTY
 
-## command-not-found handler ##
-# In case of failure, informs the user which Arch package provides the command
+# command-not-found - In case of failure, informs the user which Arch package provides the command
 [[ -s /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
 
-## LS_COLORS ##
-# Defines the output colors for the ls command
+# LS_COLORS - Defines the output colors for the ls command
 [[ -s ~/.local/share/lscolors.sh ]] && source ~/.local/share/lscolors.sh
 
-# Plugins #
-source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh  # Zsh Autosuggestions
+# zsh-autosuggestions - Fish-like autosuggestions for Zsh
+source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-# Zsh-syntax-highlightling
+# zsh-syntax-highlightling - Highlight syntax of Zsh commands
 source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Zsh-FZF
+# Zsh-FZF - Integrate fzf with Zsh. Provides Ctrl+R, Ctrl+T, Alt+C
 source $HOME/.config/zsh/plugins/zsh-fzf/key-bindings.zsh
-
-# Uncomment the lines below to configure completion using the zsh-completion plugin
-# fpath=($HOME/.config/zsh/plugins/zsh-completions/src $fpath)
-# # Completion settings
-# zstyle ':completion:*' menu yes select
-# zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-# source $HOME/.config/zsh/plugins/zsh-completions/completion-options.zsh
-# autoload -Uz compinit
-# compinit
 
 # Uncomment the lines below to replace Zsh's builtin completion mechanism with fzf
 # # Fzf-tab: Make fzf the deafault Zsh completion engine

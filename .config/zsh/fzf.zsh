@@ -1,10 +1,24 @@
-## FZF ##
-# Custom FZF Shortcuts:
-# 	Ctrl + T - Find any files/folders in $HOME
-# 	Alt + C - Change to any directory in $HOME
+###############################################################################
+#                                  FZF CONFIG                                 #
+###############################################################################
+# ---- Environment Variables --------------------------------------------------
+# Default command for FZF
 export FZF_DEFAULT_COMMAND="fd"
+
+# Find home files/directories with Ctrl+T
 export FZF_CTRL_T_COMMAND="fd . $HOME"
+# Ctrl+T options
+export FZF_CTRL_T_OPTS="--preview='$HOME/.config/fzf/preview.sh {}'"
+
+# Find home directories with Alt+C
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+# Alt+C options
+export FZF_ALT_C_OPTS="--preview='lsd --icon=always --color=always --tree --depth 1 {}'"
+
+# Ctrl+R (history search) options
+export FZF_CTRL_R_OPTS=""
+
+# Default FZF Config
 export FZF_DEFAULT_OPTS="
 -i
 --ansi
@@ -29,20 +43,13 @@ export FZF_DEFAULT_OPTS="
 --bind='ctrl-e:execute(nvim {+} >/dev/tty)'
 --bind='ctrl-u:preview-page-up'
 --bind='ctrl-d:preview-page-down'"
-# Additional opts:
-# --marker='󰄵 '
-# --border-label="┨  Label  ┠"
-# --preview-window=':hidden'
 
-export FZF_CTRL_R_OPTS=""
-export FZF_ALT_C_OPTS="--preview='lsd --icon=always --color=always --tree --depth 1 {}'"
-export FZF_CTRL_T_OPTS="--preview='$HOME/.config/fzf/preview.sh {}'"
-
+# ---- Aliases-----------------------------------------------------------------
 # FZF with directory/file previewer for multiple mime-types
 alias fzp="fzf --preview='$HOME/.config/fzf/preview.sh {}'"
 
-## FUNCTIONS ##
-# Edit a config file selected via FZF
+# ---- Functions --------------------------------------------------------------
+# cfile - Use FZF to select a config file for edition
 cfile() {
   edfile=""
   if (( $# > 0 ))
@@ -57,7 +64,7 @@ cfile() {
   fi
 }
 
-# CD to a config folder selected via FZF
+# cdir - Change to a config directory selected witg FZF
 cdir() {
   cddir=""
   if (( $# > 0 ))
