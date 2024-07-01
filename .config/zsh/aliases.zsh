@@ -2,8 +2,6 @@
 #                                 ZSH ALIASES                                 #
 ###############################################################################
 # ---- COLORIZE OUTPUT & OVERRIDE APPLICATIONS --------------------------------
-# Set the theme for bat
-alias bat='bat --theme=OneHalfDark'
 # Replace diff with batdiff
 alias diff='batdiff --delta'
 # Colorize grep output
