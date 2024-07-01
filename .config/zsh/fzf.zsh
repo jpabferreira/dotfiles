@@ -67,14 +67,19 @@ cfile() {
 # cdir - Change to a config directory selected witg FZF
 cdir() {
   cddir=""
-  if (( $# > 0 ))
+  if (( $# == 0 ))
 	then
-    cddir=$(find ~/.config -maxdepth 1 -type d | fzf -q "$@" --preview='lsd --tree --icon=always --color=always --depth 2 {}')
-  else
     cddir=$(find ~/.config -maxdepth 1 -type d | fzf --preview='lsd --tree --icon=always --color=always --depth 2 {}')
+  else
+    if [[ -d "$HOME/.config/$1" ]]
+    then
+      cddir="$HOME/.config/$1"
+    else
+      cddir=$(find ~/.config -maxdepth 1 -type d | fzf -q "$@" --preview='lsd --tree --icon=always --color=always --depth 2 {}')
+    fi
   fi
 
   if [ -d $cddir ] && [[ $cddir != "" ]] ; then
-    cd $cddir
+    cd "$cddir"
   fi
 }
