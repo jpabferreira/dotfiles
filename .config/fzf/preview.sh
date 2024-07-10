@@ -17,7 +17,7 @@
 #
 
 if [[ $# -ne 1 ]]; then
-  >&2 echo "usage: $0 FILENAME"
+  echo "usage: $0 FILENAME"
   exit 1
 fi
 
