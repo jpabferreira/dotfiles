@@ -17,8 +17,8 @@ text/x-log=nvim.desktop;
 video/mp4=vlc.desktop;mplayer.desktop;mpv.desktop;
 video/x-matroska=mpv.desktop;vlc.desktop;
 x-scheme-handler/magnet=org.qbittorrent.qBittorrent.desktop;
-font/woff=org.gnome.FontViewer.desktop;
-font/woff2=org.gnome.FontViewer.desktop;
+font/woff=com.github.FontManager.FontViewer.desktop;org.gnome.FontViewer.desktop;
+font/woff2=com.github.FontManager.FontViewer.desktop;org.gnome.FontViewer.desktop;
 application/its+xml=nvim.desktop;
 application/x-compressed-tar=peazip.desktop;xarchiver.desktop;
 application/x-xz-compressed-tar=xarchiver.desktop;
@@ -31,7 +31,11 @@ application/x-bzip2=xarchiver.desktop;
 application/x-theme=nvim.desktop;
 image/jpeg=sxiv.desktop;
 inode/directory=easytag.desktop;
-application/x-font-bdf=org.gnome.FontViewer.desktop;
+application/x-font-bdf=com.github.FontManager.FontViewer.desktop;org.gnome.FontViewer.desktop;
+font/collection=com.github.FontManager.FontViewer.desktop;
+application/x-ms-ne-executable=com.github.FontManager.FontViewer.desktop;
+application/x-font-ttx=com.github.FontManager.FontViewer.desktop;
+application/octet-stream=com.github.FontManager.FontViewer.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-ebook-viewer.desktop

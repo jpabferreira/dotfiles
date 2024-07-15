@@ -102,7 +102,7 @@ elif echo "${mime}" | grep -qE "$MIME_FON"; then
 	title "  Font preview: $fname"
 	if [[ ! -s $tfpath ]]; then
 		touch "$tfpath"
-		convert -size 800x500 xc:"#2B2B2B" -fill "#E6E1DC" -gravity center -pointsize 35 -font "$fpath" -annotate +0+0 "$TEXT_SAMPLE" -flatten "$tfpath" || ok=false;
+		magick -size 800x500 xc:"#2B2B2B" -fill "#E6E1DC" -gravity center -pointsize 35 -font "$fpath" -annotate +0+0 "$TEXT_SAMPLE" -flatten "$tfpath" || ok=false;
 	fi
 
 	# Show generated image

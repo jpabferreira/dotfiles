@@ -57,7 +57,7 @@
     padding = 10 #8
 
     # Horizontal padding.
-    horizontal_padding = 10 # 8
+    horizontal_padding = 20 # 8
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
@@ -160,13 +160,14 @@
     icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 256 # 32
+    max_icon_size = 48 # 32
 
     # Paths to default icons.
     # /usr/share/icons/gnome/48x48/status/:/usr/share/icons/gnome/48x48/devices/
     # icon_path = /usr/share/icons/Papirus/96x96/devices/:/usr/share/icons/Papirus/48x48/status/:/usr/share/icons/Papirus/96x96/apps/
     # icon_path = /usr/share/icons/Papirus/96x96/devices/:/usr/share/icons/Papirus/48x48/status/:/usr/share/icons/Papirus/96x96/apps/
-    icon_path = /home/joao/.local/share/icons/Faenza/apps/48/:/home/joao/.local/share/icons/Faenza/devices/48/:/home/joao/.local/share/icons/Faenza/status/48/:/home/joao/.local/share/icons/Faenza/stock/48/:/home/joao/.local/share/icons/Faenza/extras/48/:/home/joao/.local/share/icons/Faenza/places/48/:/home/joao/.local/share/icons/Faenza/actions/48/:/home/joao/.local/share/icons/Faenza/emblems/48/:/home/joao/.local/share/icons/Faenza/mimetypes/48/
+    # icon_path = /home/joao/.local/share/icons/Faenza/apps/48/:/home/joao/.local/share/icons/Faenza/devices/48/:/home/joao/.local/share/icons/Faenza/status/48/:/home/joao/.local/share/icons/Faenza/stock/48/:/home/joao/.local/share/icons/Faenza/extras/48/:/home/joao/.local/share/icons/Faenza/places/48/:/home/joao/.local/share/icons/Faenza/actions/48/:/home/joao/.local/share/icons/Faenza/emblems/48/:/home/joao/.local/share/icons/Faenza/mimetypes/48/
+    icon_path = /home/joao/.local/share/icons/Flat-Remix-Grey-Dark/apps/scalable/
 
     ### History ###
 
