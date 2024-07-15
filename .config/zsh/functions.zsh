@@ -2,6 +2,12 @@
 #                                ZSH FUNCTIONS                                #
 ###############################################################################
 # ---- Filesystem-related -----------------------------------------------------
+# srch - Search the current (& sub-) directory for items containing the command
+# argument(s)
+srch() {
+  find . -iname "*$@*"
+}
+
 # flatdir - Move all files in sub-directories to the current directory
 flatdir() {
   find . -mindepth 2 -type f -exec mv -f '{}' ./ ';'

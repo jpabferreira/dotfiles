@@ -38,7 +38,7 @@ source $HOME/.config/zsh/fzf.zsh
 source $HOME/.config/zsh/cursor.zsh
 source $HOME/.config/zsh/bindings.zsh
 
-# --- Autostart Hyprland ------------------------------------------------------
+# --- Autostart Hyprland after login ------------------------------------------
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
   exec Hyprland > ~/.hyprland.log
 fi

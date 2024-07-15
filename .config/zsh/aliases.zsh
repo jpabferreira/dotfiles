@@ -10,6 +10,8 @@ alias grep="grep --color=always"
 alias ip='ip -color=always'
 # Replace man with batman to read man pages. Requires bat-extras
 alias man='batman'
+# Set specific BAT theme for batman
+# alias man='BAT_THEME=1337 batman'
 
 # ---- QUICK ACCESS -----------------------------------------------------------
 # Temporary notes
@@ -34,19 +36,24 @@ alias cpics="cd $HOME/Pictures"
 alias crepo="cd $HOME/Repos"    
 alias cscri="cd $HOME/Scripts"  
 
-# Replace ls with lsd. Requires 'lsd'
-alias ls='lsd --icon=always --color=always --group-directories-first --hyperlink=always'
-
-# ls/lsd quick commands
-alias lsa='ls -lah' 
-alias l='ls -lah' # Detailed list, all, human-readable form
-alias ll='ls -lh'  # Detailed list, human-readable form
-alias la='ls -lAh' # Detailed list, all but hidden, human-readable form
-alias ll-size='ls -lhSr' # Size-sorted
-alias ll-date='ls -lhtr --date +"%d/%m/%Y %H:%M"' # Date-sorted
-alias ll-dir='ls -lh | awk -e "/30md/ {print}" '  # Directories only
-alias ll-file='ls -lh | awk -e "!/30md/ {print}" ' # Files only
-alias tree='ls --tree' # Tree view
+# Read the config file
+EZA_FLAGS=$(cat $HOME/.config/eza/eza-flags.conf)
+# Replace ls with eza. Requires 'eza'
+alias ls="eza $EZA_FLAGS"
+# Some quick file/directory listing commands
+# Detailed list view
+alias   ll="eza $EZA_FLAGS -l "                 # Detailed list default
+alias   la="eza $EZA_FLAGS -la "                # All (inc hidden)
+alias  lls="eza $EZA_FLAGS -l --sort=size "     # Size-sorted
+alias  lln="eza $EZA_FLAGS -la --sort=newest "  # Date-sorted
+alias  lld="eza $EZA_FLAGS -lD "                # Directories only
+alias  llf="eza $EZA_FLAGS -lf "                # Files only
+alias  las="eza $EZA_FLAGS -la --sort=size "    # All, Size-sorted
+alias  lan="eza $EZA_FLAGS -la --sort=newest "  # All, Date-sorted
+alias  lad="eza $EZA_FLAGS -laD "               # All, Directories only
+alias  laf="eza $EZA_FLAGS -laf "               # All, Files only
+# Tree view
+alias tree="eza $EZA_FLAGS --tree"
 
 # Make executable
 alias mkexe='chmod +x '
@@ -55,27 +62,20 @@ alias mkexe='chmod +x '
 alias rscp='rsync -avrh --info=progress2'
 alias rsmv='rsync -avrh --info=progress2 --remove-source-files'
 
-# Find largest directories (TODO: substitute * for desired path)
-alias big='du -ah * | sort -rh | head -20'
-
 # ---- GIT --------------------------------------------------------------------
 # Dotfiles management alias. Uses ~/.dot as bare repo with ~ as work tree.
 alias dot="/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME"
 
 # ---- Process Management------------------------------------------------------
-# ps with highly verbose output
+# List all processes with highly verbose output
 alias psv='ps axfo pid,euser,egroup,args'
-# Kill process with FZF
-alias pskill='ps -au joao | awk "{printf \"%7.7s   %-15s \n\" , \$1, \$4}" | fzf --header-lines=1 --no-preview -i --border-label=" 󰯈  TERMINATE PROCESS 󰯈 " --margin=1,1% | awk "{print \$1}" | xargs kill -9'
-# Search running process. Return PID
-alias psearch='ps -au joao | awk "{printf \"%7.7s   %-15s \n\" , \$1, \$4}" | grep -i '
 
 # ---- System -----------------------------------------------------------------
 # Launch a shell with the zprof profiler
 alias zprofile='time ZSH_DEBUGRC=1 zsh -i -c exit'
 
 # Pretty print the path
-alias pathpr='echo $PATH | tr -s ":" "\n"'
+alias ppath='echo $PATH | tr -s ":" "\n"'
 
 # Font search. See also 'fontpreview' and 'gtk2fontsel'
 alias fs-family='fc-list : family | grep -i '
@@ -83,12 +83,10 @@ alias fs-file='fc-list : file | grep -i '
 alias fs-match='fc-match '
 
 # Graphical sudo
-alias xsudo='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
+alias gsu='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
 
-# Clipboard
-alias clip="xclip -selection c"
 # Copy current working dir path to clipboard
-alias pwdc="pwd | tr -d '\n' | tr -d '\r' | xclip -selection c"
+alias cwd="pwd | tr -d '\n' | tr -d '\r' | wl-copy"
 
 # ---- Other ------------------------------------------------------------------
 # Translator (requires https://github.com/soimort/translate-shell)

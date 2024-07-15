@@ -21,8 +21,11 @@ export HISTTIMEFORMAT="[%F %T] "
 export HISTFILE="$HOME/.cache/zsh/zsh_history"
 
 # ---- Application-specific ---------------------------------------------------
-# ls - Disable wrapping filenames containing spaces with quotes
-export QUOTING_STYLE=literal
+# lsd - Disable wrapping filenames containing spaces with quotes
+# export QUOTING_STYLE=literal
+
+# eza - Set spacing between icons and file/directory names
+export EZA_ICON_SPACING=2
 
 # ranger - Set the RANGER_LOAD_DEFAULT_RC to FALSE to stop ranger from loading
 # both the default and the custom rc.conf in ~/.config/ranger

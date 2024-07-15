@@ -45,11 +45,19 @@ export FZF_DEFAULT_OPTS="
 --bind='ctrl-d:preview-page-down'"
 
 # ---- Aliases-----------------------------------------------------------------
-# FZF with directory/file previewer for multiple mime-types
-alias fzp="fzf --preview='$HOME/.config/fzf/preview.sh {}'"
+# Kill user process with FZF
+alias fzfkill="ps -au joao | awk '{printf \"%7.7s   %-15s \n\" , \$1, \$4}' | fzf --header-lines=1 --no-preview -i --border-label=' 󰯈  TERMINATE PROCESS 󰯈 ' --margin=1,1% | awk '{printf \$1}' | xargs kill -9"
 
 # ---- Functions --------------------------------------------------------------
-# cfile - Use FZF to select a config file for edition
+# Open file selected via FZF with directory/file previewer for multiple mime-types
+fzfopen() {
+  selfile=$(fzf --preview='$HOME/.config/fzf/preview.sh {}')
+  if [[ -f "$selfile" ]]; then
+    xdg-open "$selfile" & disown
+  fi
+}
+
+# cfile - Select a config file for edition with FZF
 cfile() {
   edfile=""
   if (( $# > 0 ))
@@ -64,7 +72,7 @@ cfile() {
   fi
 }
 
-# cdir - Change to a config directory selected witg FZF
+# cdir - Change to a config directory selected with FZF
 cdir() {
   cddir=""
   if (( $# == 0 ))
