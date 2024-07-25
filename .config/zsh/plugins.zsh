@@ -8,7 +8,8 @@
 [[ -s /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # LS_COLORS - Defines the output colors for the ls command
-[[ -s ~/.local/share/lscolors.sh ]] && source ~/.local/share/lscolors.sh
+# [[ -s ~/.local/share/lscolors.sh ]] && source ~/.local/share/lscolors.sh
+eval $(dircolors ~/Projects/Dircolors/dircolors)
 
 # zsh-autosuggestions - Fish-like autosuggestions for Zsh
 source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 

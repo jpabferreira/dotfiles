@@ -1,0 +1,743 @@
+#                                    LS_COLORS
+# Maintainers: Magnus Woldrich <m@japh.se>,
+#              Ryan Delaney <ryan.patrick.delaney@protonmail.com>
+#         URL: https://github.com/trapd00r/LS_COLORS
+#
+#   This is a collection of extension:color mappings, suitable to use as your
+#   LS_COLORS environment variable. Most of them use the extended color map,
+#   described in the ECMA-48 document; in other words, you'll need a terminal
+#   with capabilities of displaying 256 colors.
+#
+#   As of this writing, over 500 different filetypes/extensions are supported.
+#   That's indeed a lot of extensions, but there's a lot more! Therefore I need
+#   your help.
+#
+#   Fork this project on github, add the extensions you are missing, and send me
+#   a pull request.
+#
+#   For files that usually end up next to each other, like html, css and js,
+#   try to pick colors that fit nicely together. Filetypes with multiple
+#   possible extensions, like htm and html, should have the same color.
+
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the Perl Artistic License for more details.
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the Perl Artistic License as published by the Perl Foundation,
+# either version 1.0 of the License, or (at your option) any later version.
+#
+# You should have received a copy of the Perl Artistic License along
+# with this program.  If not, see <http://www.perlfoundation.org/artistic_license_1_0>.
+
+# "NORMAL don't reset the bold attribute -
+# https://github.com/trapd00r/LS_COLORS/issues/11
+#NORMAL               38;5;254
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Base (core) config
+BLK                   38;5;0;107          # Core
+CAPABILITY            38;5;0;106          # Core
+CHR                   38;5;0;107          # Core
+DIR                   38;5;4;1            # Core
+DOOR                  48;5;4              # Core
+EXEC                  38;5;2;1;3;4          # Core
+FIFO                  38;5;0;104          # Core
+FILE                  38;5;7              # Core
+LINK                  target              # Core
+MULTIHARDLINK         38;5;0;1;101        # Core
+NORMAL                0                   # Core
+ORPHAN                48;5;1;38;5;0;1     # Core
+OTHER_WRITABLE        38;5;0;1;105        # Core
+SETGID                38;5;0;103          # Core
+SETUID                38;5;0;102          # Core
+SOCK                  38;5;0;104          # Core
+STICKY                48;5;3;38;5;0       # Core
+STICKY_OTHER_WRITABLE 48;5;3;38;5;0;1     # Core
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Logs & plain text
+.log                  38;5;11             # Logs
+.txt                  38;5;11             # Plain-text
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Software documentation
+*README               38;5;11;4           # Documentation
+*README.rst           38;5;11;4           # Documentation
+*README.md            38;5;11;4           # Documentation
+*LICENSE              38;5;11;4           # Documentation
+*LICENSE.md           38;5;11;4           # Documentation
+*COPYING              38;5;11;4           # Documentation
+*INSTALL              38;5;11;4           # Documentation
+*COPYRIGHT            38;5;11;4           # Documentation
+*AUTHORS              38;5;11;4           # Documentation
+*HISTORY              38;5;11;4           # Documentation
+*CONTRIBUTORS         38;5;11;4           # Documentation
+*CONTRIBUTING         38;5;11;4           # Documentation
+*CONTRIBUTING.md      38;5;11;4           # Documentation
+*CHANGELOG            38;5;11;4           # Documentation
+*CHANGELOG.md         38;5;11;4           # Documentation
+*CODEOWNERS           38;5;11;4           # Documentation
+*PATENTS              38;5;11;4           # Documentation
+*VERSION              38;5;11;4           # Documentation
+*NOTICE               38;5;11;4           # Documentation
+*CHANGES              38;5;11;4           # Documentation
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Structured text / data
+.adoc                 38;5;3              # Markup
+.asciidoc             38;5;3              # Markup
+.etx                  38;5;3              # Markup
+.info                 38;5;3              # Markup
+.markdown             38;5;3              # Markup
+.md                   38;5;3              # Markup
+.mkd                  38;5;3              # Markup
+.mdx                  38;5;3              # Markup
+.nfo                  38;5;3              # Markup
+.org                  38;5;3              # Markup
+.norg                 38;5;3              # Markup
+.pod                  38;5;3              # Markup
+.rst                  38;5;3              # Markup
+.tex                  38;5;3              # Markup
+.textile              38;5;3              # Markup
+.bib                  38;5;3              # Data store # non-relational
+.json                 38;5;3              # Data store # non-relational
+.jsonc                38;5;3              # Data store # non-relational
+.json5                38;5;3              # Data store # non-relational
+.hjson                38;5;3              # Data store # non-relational
+.jsonl                38;5;3              # Data store # non-relational
+.jsonnet              38;5;3              # Data store # non-relational
+.libsonnet            38;5;3              # Data store # non-relational
+.ndjson               38;5;3              # Data store # non-relational
+.msg                  38;5;3              # Data store # non-relational
+.pgn                  38;5;3              # Data store # non-relational
+.rss                  38;5;3              # Data store # non-relational
+.xml                  38;5;3              # Data store # non-relational
+.fxml                 38;5;3              # Data store # non-relational
+.toml                 38;5;3              # Data store # non-relational
+.yaml                 38;5;3              # Data store # non-relational
+.yml                  38;5;3              # Data store # non-relational
+.RData                38;5;3              # Data store # non-relational
+.rdata                38;5;3              # Data store # non-relational
+.rng                  38;5;3              # Data store # non-relational
+.rnc                  38;5;3              # Data store # non-relational
+.xsd                  38;5;3              # Data store # non-relational
+.dtd                  38;5;3              # Data store # non-relational
+.sgml                 38;5;3              # Data store # non-relational
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Databse
+.accdb                38;5;3;3            # Data store # MS Access
+.accde                38;5;3;3            # Data store # MS Access
+.accdr                38;5;3;3            # Data store # MS Access
+.accdt                38;5;3;3            # Data store # MS Access
+.db                   38;5;3;3            # Data store
+.fmp12                38;5;3;3            # Data store
+.fp7                  38;5;3;3            # Data store
+.localstorage         38;5;3;3            # Data store
+.mdb                  38;5;3;3            # Data store
+.mde                  38;5;3;3            # Data store
+.nc                   38;5;3;3            # Data store # NetCDF
+.sqlite               38;5;3;3            # Data store # SQLite
+.typelib              38;5;3;3            # Data store
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# (Binary) Documents / Publications
+.cbr                  38;5;14             # Documents # binary
+.cbz                  38;5;14             # Documents # binary
+.chm                  38;5;14             # Documents # binary
+.djvu                 38;5;14             # Documents # binary
+.epub                 38;5;14             # Documents # binary
+.pdf                  38;5;14             # Documents # binary
+.PDF                  38;5;14             # Documents # binary
+.mobi                 38;5;14             # Documents # binary
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Documents (office)
+.csv                  38;5;12             # Spreadsheet (plain text)
+.doc                  38;5;12             # Documents
+.docm                 38;5;12;3           # Documents # with macros
+.docx                 38;5;12             # Documents
+.numbers              38;5;12             # Spreadsheet
+.odb                  38;5;12             # Documents
+.odp                  38;5;12             # Presentation
+.ods                  38;5;12             # Spreadsheet
+.odt                  38;5;12             # Documents
+.pages                38;5;12             # Documents
+.pps                  38;5;12             # Presentation
+.ppt                  38;5;12             # Presentation
+.ppts                 38;5;12             # Presentation
+.pptsm                38;5;12;3           # Presentation (with macros)
+.pptx                 38;5;12             # Presentation
+.pptxm                38;5;12;3           # Presentation (with macros)
+.prisma               38;5;12             # Prisma Schema/Config
+.rtf                  38;5;12             # Documents
+.tsv                  38;5;12             # Spreadsheet (plain text)
+.xla                  38;5;12             # Spreadsheet
+.xls                  38;5;12             # Spreadsheet
+.xlsx                 38;5;12             # Spreadsheet
+.xlsxm                38;5;12;3           # Spreadsheet (with macros)
+.xltm                 38;5;12;3           # Spreadsheet (with macros)
+.xltx                 38;5;12;3           # Spreadsheet (with macros)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Config files
+*authorized_keys      38;5;11;3           # Configs
+*cfg                  38;5;11;3           # Configs
+*conf                 38;5;11;3           # Configs
+*config               38;5;11;3           # Configs
+*known_hosts          38;5;11;3           # Configs
+*rc                   38;5;11;3           # Configs
+.bash_login           38;5;11;3           # Configs
+.bash_logout          38;5;11;3           # Configs
+.bash_profile         38;5;11;3           # Configs
+.epf                  38;5;11;3           # Configs
+.hidden-color-scheme  38;5;11;3           # Configs
+.hidden-tmTheme       38;5;11;3           # Configs
+.ini                  38;5;11;3           # Configs
+.last-run             38;5;11;3           # Configs
+.merged-ca-bundle     38;5;11;3           # Configs
+.pcf                  38;5;11;3           # Configs
+.plist                38;5;11;3           # Configs
+.profile              38;5;11;3           # Configs
+.psf                  38;5;11;3           # Configs
+.rstheme              38;5;11;3           # Configs
+.sublime-build        38;5;11;3           # Configs
+.sublime-commands     38;5;11;3           # Configs
+.sublime-keymap       38;5;11;3           # Configs
+.sublime-project      38;5;11;3           # Configs
+.sublime-settings     38;5;11;3           # Configs
+.sublime-snippet      38;5;11;3           # Configs
+.sublime-workspace    38;5;11;3           # Configs
+.tmTheme              38;5;11;3           # Configs
+.user-ca-bundle       38;5;11;3           # Configs
+.viminfo              38;5;11;3           # Configs
+.zlogin               38;5;11;3           # Configs
+.zlogout              38;5;11;3           # Configs
+.zprofile             38;5;11;3           # Configs
+.zshenv               38;5;11;3           # Configs
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Shell scripting
+.BAT                  38;5;9              # Code (shell)
+.awk                  38;5;9              # Code (shell)
+.bash                 38;5;9              # Code (shell)
+.bat                  38;5;9              # Code (shell)
+.fish                 38;5;9              # Code (shell)
+.kak                  38;5;9              # Code (shell)
+.sed                  38;5;9              # Code (shell)
+.sh                   38;5;9              # Code (shell)
+.vim                  38;5;9              # Code (shell)
+.zsh                  38;5;9              # Code (shell)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Source code
+.C                    38;5;10             # C
+.F                    38;5;10             # Fortran
+.F03                  38;5;10             # Fortran
+.F08                  38;5;10             # Fortran
+.F90                  38;5;10             # Fortran
+.F95                  38;5;10             # Fortran
+.PL                   38;5;10             # Code (interpreted) (Perl)
+.R                    38;5;10             # Code (interpreted) (R)
+.S                    38;5;10             # Pascal
+.agda                 38;5;10             # Agda
+.agdai                38;5;10             # Agda
+.ahk                  38;5;10             # Code (interpreted) (AutoHotKey)
+.asm                  38;5;10             # ASM
+.astro                38;5;10             # Templating (Web)
+.c                    38;5;10             # C
+.c++                  38;5;10             # C++
+.cc                   38;5;10             # Csharp
+.cjs                  38;5;10             # CommonJS
+.cl                   38;5;10             # LISP
+.clj                  38;5;10             # Clojure
+.cljc                 38;5;10             # Clojure
+.cljs                 38;5;10             # Clojure
+.cljw                 38;5;10             # Clojure Gorilla notebook
+.coffee               38;5;10             # Java
+.cp                   38;5;10             # Csharp
+.cpp                  38;5;10             # Csharp
+.cr                   38;5;10             # Crystal
+.cs                   38;5;10             # Csharp
+.ctp                  38;5;10             # PHP (CakePHP)
+.cxx                  38;5;10             # Csharp
+.dart                 38;5;10             # Dart
+.ejs                  38;5;10             # Templating (Web)
+.el                   38;5;10             # LISP (Emacs)
+.elc                  38;5;10             # LISP (Emacs)
+.eln                  38;5;10             # LISP (Emacs)
+.f                    38;5;10             # Fortran
+.f03                  38;5;10             # Fortran
+.f08                  38;5;10             # Fortran
+.f90                  38;5;10             # Fortran
+.f95                  38;5;10             # Fortran
+.for                  38;5;10             # Fortran
+.ftn                  38;5;10             # Fortran
+.gemspec              38;5;10             # Code (interpreted) (ruby)
+.go                   38;5;10             # Golang
+.hi                   38;5;10             # Haskell
+.hs                   38;5;10             # Haskell
+.htm                  38;5;10             # Styling (Web)
+.html                 38;5;10             # Markup (Web)
+.ipynb                38;5;10             # Code (interpreted) (Python)
+.java                 38;5;10             # Java
+.jhtm                 38;5;10             # Markup (Web)
+.js                   38;5;10             # Javascript
+.jsm                  38;5;10             # Java
+.jsp                  38;5;10             # Java
+.jsx                  38;5;10             # Javascript eXtended
+.lagda                38;5;10             # Agda
+.lagda.md             38;5;10             # Agda
+.lagda.rst            38;5;10             # Agda
+.lagda.tex            38;5;10             # Agda
+.lhs                  38;5;10             # Haskell
+.lisp                 38;5;10             # LISP
+.lua                  38;5;10             # Code (interpreted) (Lua)
+.mht                  38;5;10             # Markup (Web)
+.mjs                  38;5;10             # ECMAScript
+.ml                   38;5;10             # LISP
+.moon                 38;5;10             # Code (interpreted) (Moonscript)
+.msql                 38;5;10             # Code (SQL)
+.mustache             38;5;10             # Templating (Web)
+.mysql                38;5;10             # Code (SQL)
+.nim                  38;5;10             # Nim
+.nimble               38;5;10             # Nim
+.pgsql                38;5;10             # Code (SQL)
+.php                  38;5;10             # php
+.pl                   38;5;10             # Code (interpreted) (Perl)
+.pm                   38;5;10             # Code (interpreted) (Perl)
+.prql                 38;5;10             # Code (SQL)
+.pug                  38;5;10             # Templating (Web)
+.py                   38;5;10             # Code (interpreted) (Python)
+.pyc                  38;5;10             # Code (Python)
+.r                    38;5;10             # Code (interpreted) (R)
+.rb                   38;5;10             # Code (interpreted) (ruby)
+.rkt                  38;5;10             # LISP
+.rs                   38;5;10             # Code (compiled) (Rust)
+.s                    38;5;10             # Pascal
+.sc                   38;5;10             # Scala
+.scala                38;5;10             # Scala
+.scpt                 38;5;10             # AppleScript
+.sql                  38;5;10             # Code (SQL)
+.svelte               38;5;10             # Templating (Web)
+.swift                38;5;10             # Swift
+.sx                   38;5;10             # SimplexNumerica
+.t                    38;5;10             # Code (interpreted) (Perl)
+.tcl                  38;5;10             # Code (interpreted) (Tool Command Language)
+.tf                   38;5;10             # Code (Terraform)
+.tfstate              38;5;10             # Code (Terraform)
+.tfvars               38;5;10             # Code (Terraform)
+.ts                   38;5;10             # Typescript
+.tsx                  38;5;10             # Typescript eXtended
+.twig                 38;5;10             # php (Twig)
+.v                    38;5;10             # V
+.vala                 38;5;10             # Vala
+.vapi                 38;5;10             # Vala
+.vb                   38;5;10             # VBA
+.vba                  38;5;10             # VBA
+.vbs                  38;5;10             # VBA
+.vue                  38;5;10             # Templating (Web)
+.xsh                  38;5;10             # Code (interpreted) (xonsh)
+.zig                  38;5;10             # Zig
+.h                    38;5;10;3           # C headers
+.H                    38;5;10;3           # C headers
+.tcc                  38;5;10;3           # C headers
+.h++                  38;5;10;3           # C++ headers
+.hpp                  38;5;10;3           # C++ headers
+.hxx                  38;5;10;3           # C++ headers
+.ii                   38;5;10;3           # C++ headers
+.M                    38;5;10;3           # Objective C method file
+.m                    38;5;10;3           # Objective C method file
+.http                 38;5;10;3           # Request (Web)
+.eml                  38;5;10;3           # Email (Web)
+.css                  38;5;10;3           # Styling (Web)
+.less                 38;5;10;3           # Styling (Web)
+.sass                 38;5;10;3           # Styling (Web)
+.scss                 38;5;10;3           # Styling (Web)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Build process & patching
+*Containerfile        38;5;14;3           # Build process # Containers
+*Dockerfile           38;5;14;3           # Build process (Docker)
+*MANIFEST             38;5;14;3           # Build process (Make)
+*Makefile             38;5;14;3           # Build process (Make)
+*pm_to_blib           38;5;14;3           # Build process (Perl)
+.SKIP                 38;5;14;3           # Build process (Automake)
+.am                   38;5;14;3           # Build process (Automake)
+.containerignore      38;5;14;3           # Build process # Containers
+.dhall                38;5;14;3           # Functional configuration
+.dockerignore         38;5;14;3           # Build process (Docker)
+.hin                  38;5;14;3           # Build process (Automake)
+.in                   38;5;14;3           # Build process (Automake)
+.m4                   38;5;14;3           # Build process (Automake)
+.nix                  38;5;14;3           # Functional configuration
+.old                  38;5;14;3           # Build process (Automake)
+.out                  38;5;14;3           # Build process (Automake)
+.rake                 38;5;14;3           # Build process (Ruby)
+.scan                 38;5;14;3           # Build process (Automake)
+.diff                 38;5;14;3           # Patch files
+.patch                38;5;14;3;1         # Patch files
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Graphics
+.JPG                  38;5;1              # Graphics
+.TIFF                 38;5;1              # Graphics
+.bmp                  38;5;1              # Graphics
+.cdr                  38;5;1              # Graphics
+.dicom                38;5;1              # Graphics
+.flif                 38;5;1              # Graphics
+.gif                  38;5;1              # Graphics
+.icns                 38;5;1              # Graphics
+.ico                  38;5;1              # Graphics
+.jpeg                 38;5;1              # Graphics
+.jpg                  38;5;1              # Graphics
+.jxl                  38;5;1              # Graphics
+.nth                  38;5;1              # Graphics
+.png                  38;5;1              # Graphics
+.psd                  38;5;1              # Graphics
+.pxd                  38;5;1              # Graphics
+.pxm                  38;5;1              # Graphics
+.tif                  38;5;1              # Graphics
+.tiff                 38;5;1              # Graphics
+.webp                 38;5;1              # Graphics
+.xpm                  38;5;1              # Graphics
+.ai                   38;5;1;3            # Graphics (Vector)
+.eps                  38;5;1;3            # Graphics (Vector)
+.epsf                 38;5;1;3            # Graphics (Vector)
+.drw                  38;5;1;3            # Graphics (Vector)
+.ps                   38;5;1;3            # Graphics (Vector)
+.svg                  38;5;1;3            # Graphics (Vector)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Video
+.IFO                  38;5;5              # Video
+.MOV                  38;5;5              # Video
+.avi                  38;5;5              # Video
+.divx                 38;5;5              # Video
+.m2v                  38;5;5              # Video
+.m4v                  38;5;5              # Video
+.mkv                  38;5;5              # Video
+.mov                  38;5;5              # Video
+.mp4                  38;5;5              # Video
+.mpeg                 38;5;5              # Video
+.mpg                  38;5;5              # Video
+.ogm                  38;5;5              # Video
+.rmvb                 38;5;5              # Video
+.sample               38;5;5              # Video
+.wmv                  38;5;5              # Video
+.3g2                  38;5;5              # Video (mobile/streaming)
+.3gp                  38;5;5              # Video (mobile/streaming)
+.asf                  38;5;5              # Video (mobile/streaming)
+.f4v                  38;5;5              # Video (mobile/streaming)
+.flv                  38;5;5              # Video (mobile/streaming)
+.gp3                  38;5;5              # Video (mobile/streaming)
+.gp4                  38;5;5              # Video (mobile/streaming)
+.ogv                  38;5;5              # Video (mobile/streaming)
+.webm                 38;5;5              # Video (mobile/streaming)
+.VOB                  38;5;5;3            # Video (lossless)
+.vob                  38;5;5;3            # Video (lossless)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Audio
+.3ga                  38;5;6              # Audio (lossy)
+.S3M                  38;5;6              # Audio (lossy)
+.aac                  38;5;6              # Audio (lossy)
+.amr                  38;5;6              # Audio (lossy)
+.au                   38;5;6              # Audio (lossy)
+.caf                  38;5;6              # Audio (lossy)
+.dat                  38;5;6              # Audio (lossy)
+.dts                  38;5;6              # Audio (lossy)
+.fcm                  38;5;6              # Audio (lossy)
+.m4a                  38;5;6              # Audio (lossy)
+.mod                  38;5;6              # Audio (lossy)
+.mp3                  38;5;6              # Audio (lossy)
+.mp4a                 38;5;6              # Audio (lossy)
+.oga                  38;5;6              # Audio (lossy)
+.ogg                  38;5;6              # Audio (lossy)
+.opus                 38;5;6              # Audio (lossy)
+.s3m                  38;5;6              # Audio (lossy)
+.sid                  38;5;6              # Audio (lossy)
+.wma                  38;5;6              # Audio (lossy)
+.aiff                 38;5;6;3            # Audio (lossless)
+.alac                 38;5;6;3            # Audio (lossless)
+.ape                  38;5;6;3            # Audio (lossless)
+.cda                  38;5;6;3            # Audio (lossless)
+.flac                 38;5;6;3            # Audio (lossless)
+.mid                  38;5;6;3            # Audio (lossless)
+.midi                 38;5;6;3            # Audio (lossless)
+.pcm                  38;5;6;3            # Audio (lossless)
+.wav                  38;5;6;3            # Audio (lossless)
+.wv                   38;5;6;3            # Audio (lossless)
+.wvc                  38;5;6;3            # Audio (lossless)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Subtitles
+.ass                  38;5;3;3            # Subtitles
+.srt                  38;5;3;3            # Subtitles
+.ssa                  38;5;3;3            # Subtitles
+.sub                  38;5;3;3            # Subtitles
+.sup                  38;5;3;3            # Subtitles
+.vtt                  38;5;3;3            # Subtitles
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Fonts
+.PFA                  38;5;13             # Fonts
+.afm                  38;5;13             # Fonts
+.fnt                  38;5;13             # Fonts
+.fon                  38;5;13             # Fonts
+.otf                  38;5;13             # Fonts
+.pfa                  38;5;13             # Fonts
+.pfb                  38;5;13             # Fonts
+.pfm                  38;5;13             # Fonts
+.ttf                  38;5;13             # Fonts
+.woff                 38;5;13             # Fonts
+.woff2                38;5;13             # Fonts
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Archives & packaged apps
+*.7z                  38;5;12             # Archives
+*.WARC                38;5;12             # Archives
+*.a                   38;5;12             # Archives
+*.arj                 38;5;12             # Archives
+*.br                  38;5;12             # Archives
+*.bz2                 38;5;12             # Archives
+*.cpio                38;5;12             # Archives
+*.gz                  38;5;12             # Archives
+*.lrz                 38;5;12             # Archives
+*.lz                  38;5;12             # Archives
+*.lzma                38;5;12             # Archives
+*.lzo                 38;5;12             # Archives
+*.rar                 38;5;12             # Archives
+*.s7z                 38;5;12             # Archives
+*.sz                  38;5;12             # Archives
+*.tar                 38;5;12             # Archives
+*.tbz                 38;5;12             # Archives
+*.tgz                 38;5;12             # Archives
+*.warc                38;5;12             # Archives
+*.xz                  38;5;12             # Archives
+*.z                   38;5;12             # Archives
+*.zip                 38;5;12             # Archives
+*.zipx                38;5;12             # Archives
+*.zoo                 38;5;12             # Archives
+*.zpaq                38;5;12             # Archives
+*.zst                 38;5;12             # Archives
+*.zstd                38;5;12             # Archives
+*.zz                  38;5;12             # Archives
+.apk                  38;5;12             # Packaged apps
+.bsp                  38;5;12             # Packaged apps
+.cab                  38;5;12             # Packaged apps
+.crx                  38;5;12             # Packaged apps # Google Chrome extension
+.deb                  38;5;12             # Packaged apps
+.dmg                  38;5;12             # Packaged apps
+.ear                  38;5;12             # Packaged apps
+.ipa                  38;5;12             # Packaged apps
+.jad                  38;5;12             # Packaged apps
+.jar                  38;5;12             # Packaged apps
+.pak                  38;5;12             # Packaged apps
+.pk3                  38;5;12             # Packaged apps
+.rpm                  38;5;12             # Packaged apps
+.vdf                  38;5;12             # Packaged apps
+.vpk                  38;5;12             # Packaged apps
+.war                  38;5;12             # Packaged apps
+.xpi                  38;5;12             # Packaged apps # Mozilla Firefox extension
+.bin                  38;5;12             # Partition images
+.fvd                  38;5;12             # Partition images
+.img                  38;5;12             # Partition images
+.iso                  38;5;12             # Partition images
+.nrg                  38;5;12             # Partition images
+.qcow                 38;5;12             # Partition images
+.sparseimage          38;5;12             # Partition images
+.toast                38;5;12             # Partition images
+.vcd                  38;5;12             # Partition images
+.vdi                  38;5;12             # Partition images
+.vfd                  38;5;12             # Partition images
+.vhd                  38;5;12             # Partition images
+.vhdx                 38;5;12             # Partition images
+.vmdk                 38;5;12             # Partition images
+.sassc                38;5;12             # Temporary files
+.swo                  38;5;12             # Temporary files
+.swp                  38;5;12             # Temporary files
+.tmp                  38;5;12             # Temporary files
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Not relevant - Greyed out
+*core                 38;5;240            # Linux user core dump file (from /proc/sys/kernel/core_pattern)
+*lock                 38;5;240            # State files
+*lockfile             38;5;240            # State files
+.aria2                38;5;240            # State dumps
+.BUP                  38;5;240            # Backups
+.backup               38;5;240            # Backups
+.bak                  38;5;240            # Backups
+.cap                  38;5;240            # Tcpdump / network traffic capture
+.crdownload           38;5;240            # Google Chrome partial download
+.dll                  38;5;240            # Dynamic linked library
+.dmp                  38;5;240            # Tcpdump / network traffic capture
+.dump                 38;5;240            # State dumps
+.git                  38;5;240            # Version control
+.gitattributes        38;5;240            # Version control
+.github               38;5;240            # Version control
+.gitignore            38;5;240            # Version control
+.gitmodules           38;5;240            # Version control
+.mdump                38;5;240            # Mini DuMP crash report
+.o                    38;5;240            # *nix Object file (shared libraries, core dumps etc)
+.orig                 38;5;240            # Undo files
+.pacnew               38;5;240            # Undo files
+.part                 38;5;240            # Partial files
+.pcap                 38;5;240            # Tcpdump / network traffic capture
+.pid                  38;5;240            # State files
+.r[0-9]{0,2}          38;5;240            # Archive segments
+.rlib                 38;5;240            # Static rust library
+.stackdump            38;5;240            # State dumps
+.state                38;5;240            # State files
+.un~                  38;5;240            # Undo files
+.z[0-9]{0,2}          38;5;240            # Archive segments
+.zcompdump            38;5;240            # State dumps
+.zwc                  38;5;240            # State dumps
+.zx[0-9]{0,2}         38;5;240            # Archive segments
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Error logs
+.err                  38;5;1;1            # Error logs
+.error                38;5;1;1            # Error logs
+.stderr               38;5;1;1            # Error logs
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# System & metadata
+.lnk                  38;5;6              # Windows symlink
+.allow                38;5;6              # /etc/hosts
+.deny                 38;5;6              # /etc/hosts
+*@.service            38;5;6              # Systemd
+.automount            38;5;6              # Systemd
+.device               38;5;6              # Systemd
+.mount                38;5;6              # Systemd
+.path                 38;5;6              # Systemd
+.service              38;5;6              # Systemd
+.snapshot             38;5;6              # Systemd
+.socket               38;5;6              # Systemd
+.swap                 38;5;6              # Systemd
+.target               38;5;6              # Systemd
+.timer                38;5;6              # Systemd
+.application          38;5;6              # Metadata
+.cue                  38;5;6              # Metadata
+.description          38;5;6              # Metadata
+.directory            38;5;6              # Metadata
+.m3u                  38;5;6              # Metadata
+.m3u8                 38;5;6              # Metadata
+.md5                  38;5;6              # Metadata
+.properties           38;5;6              # Metadata
+.sfv                  38;5;6              # Metadata
+.theme                38;5;6              # Metadata
+.torrent              38;5;6              # Metadata
+.urlview              38;5;6              # Metadata
+.webloc               38;5;6              # Metadata
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Cryptography
+.key                  38;5;3              # License keys
+*id_dsa               38;5;3;3            # Encrypted data
+*id_ecdsa             38;5;3;3            # Encrypted data
+*id_ed25519           38;5;3;3            # Encrypted data
+*id_rsa               38;5;3;3            # Encrypted data
+.asc                  38;5;3;3            # Encrypted data
+.bfe                  38;5;3;3            # Encrypted data
+.enc                  38;5;3;3            # Encrypted data
+.gpg                  38;5;3;3            # Encrypted data
+.p12                  38;5;3;3            # Encrypted data
+.p7s                  38;5;3;3            # Encrypted data
+.pem                  38;5;3;3            # Encrypted data
+.pgp                  38;5;3;3            # Encrypted data
+.sig                  38;5;3;3            # Encrypted data
+.signature            38;5;3;3            # Encrypted data
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# MacOS stuff - Greyed out
+*CodeResources        38;5;240            # MacOS code signing apps
+*PkgInfo              38;5;240            # MacOS app bundle id
+.CFUserTextEncoding   38;5;240            # MacOS
+.DS_Store             38;5;240            # MacOS
+.car                  38;5;240            # MacOS asset catalog
+.dylib                38;5;240            # MacOS shared lib
+.localized            38;5;240            # MacOS
+.nib                  38;5;240            # MacOS UI
+.entitlements         38;5;240            # Xcode files
+.pbxproj              38;5;240            # Xcode files
+.storyboard           38;5;240            # Xcode files
+.strings              38;5;240            # Xcode files
+.xcconfig             38;5;240            # Xcode files
+.xcsettings           38;5;240            # Xcode files
+.xcuserstate          38;5;240            # Xcode files
+.xcworkspacedata      38;5;240            # Xcode files
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Unsorted
+# .1p                   38;5;7
+# .3p                   38;5;7
+# .Rproj                38;5;7
+# .cnc                  38;5;7
+# .def                  38;5;7
+# .ex                   38;5;7
+# .example              38;5;7
+# .feature              38;5;7
+# .gbr                  38;5;7
+# .ger                  38;5;7
+# .ics                  38;5;7              # Calendar information
+# .map                  38;5;7
+# .mf                   38;5;7
+# .mfasl                38;5;7
+# .mi                   38;5;7
+# .mm                   38;5;7
+# .mtx                  38;5;7
+# .pc                   38;5;7
+# .pcb                  38;5;7
+# .pi                   38;5;7
+# .plt                  38;5;7
+# .pot                  38;5;7
+# .rdf                  38;5;7
+# .ru                   38;5;7
+# .sch                  38;5;7
+# .scm                  38;5;7
+# .sis                  38;5;7
+# .spl                  38;5;7
+# .sty                  38;5;7
+# .sug                  38;5;7
+# .tdy                  38;5;7
+# .tfm                  38;5;7
+# .tfnt                 38;5;7
+# .tg                   38;5;7
+# .vcard                38;5;7              # Contact information
+# .vcf                  38;5;7              # Contact information
+# .xcf                  38;5;7
+# .xln                  38;5;7
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Termcap
+TERM ansi
+TERM color-xterm
+TERM con132x25
+TERM con132x30
+TERM con132x43
+TERM con132x60
+TERM con80x25
+TERM con80x28
+TERM con80x30
+TERM con80x43
+TERM con80x50
+TERM con80x60
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
+TERM Eterm
+TERM eterm-color
+TERM gnome
+TERM gnome-256color
+TERM jfbterm
+TERM konsole
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mach-color
+TERM mlterm
+TERM putty
+TERM rxvt
+TERM rxvt-256color
+TERM rxvt-cygwin
+TERM rxvt-cygwin-native
+TERM rxvt-unicode
+TERM rxvt-unicode-256color
+TERM rxvt-unicode256
+TERM screen
+TERM screen-256color
+TERM screen-256color-bce
+TERM screen-bce
+TERM screen-w
+TERM screen.linux
+TERM screen.rxvt
+TERM terminator
+TERM tmux-256color
+TERM vt100
+TERM xterm
+TERM xterm-16color
+TERM xterm-256color
+TERM xterm-88color
+TERM xterm-color
+TERM xterm-debian
+TERM xterm-kitty
+TERM wezterm
